@@ -1,0 +1,35 @@
+*{
+    padding: 1rem;
+}
+h1,h2{
+    text-align: center;
+    font-family:"PT Serif";
+    background-color: #FFEBED;
+}
+p{
+    font-family:"DM Sans";
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #FFF7ED;
+}
+#menu a:hover{
+    text-decoration:wavy;
+}
+#grid-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #FBFFEB;
+    gap:20px;
+}
+.card-content{
+    display: flex;
+}
+footer{
+    background-color: #FFF7ED;
+}
+footer p{
+    text-align: center;
+}
