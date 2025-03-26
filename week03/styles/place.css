@@ -24,6 +24,10 @@
 body {
     font: "roboto", sans-serif;
 }
+header {
+    width: 100%;
+    height: auto;
+}
 h1 {
     background-color:#B7B6E2 ;
     width: 100%;
