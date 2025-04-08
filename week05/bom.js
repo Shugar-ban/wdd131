@@ -3,12 +3,26 @@ const button = document.querySelector('button');
 const list = document.querySelector('#list');
 const li = document.createElement('li');
 const deleteButton = document.createElement('button');
-const chaptersArray = getChapterList();
+let chaptersArray = getChapterList() || [];
 
 function getChapterList() {
   // Logic to generate the chapter list goes here
   return ["Chapter 1", "Chapter 2", "Chapter 3"]; // Example return value
 }
+
+chaptersArray.forEach(chapter => {
+  displayList(chapter);
+});
+
+button.addEventListener('click', () => {
+  if (input.value != '') {  // make sure the input is not empty
+    displayList(input.value); // call the function that outputs the submitted chapter
+    chaptersArray.push(input.value);  // add the chapter to the array
+    setChapterList(); // update the localStorage with the new array
+    input.value = ''; // clear the input
+    input.focus(); // set the focus back to the input
+  }
+});
 
 console.log(chaptersArray); // Outputs: ["Chapter 1", "Chapter 2", "Chapter 3"]
 
